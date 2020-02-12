@@ -1,0 +1,5 @@
+@each $color, $value  in $colors {
+    .bck-#{$color}{
+        background-color: rgba($value, 1);
+    }   
+}

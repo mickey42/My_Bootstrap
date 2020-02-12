@@ -1,0 +1,36 @@
+#panneau{
+    margin: 30px;
+    
+    #onglets{
+
+        li{
+            list-style: none;
+            float:left;
+            width : 125px;
+            height : 30px;
+            line-height : 30px;
+            background : rgba(151, 148, 148, 0.726);
+            text-align : center;
+            margin-right : 5px;
+            color : rgba(46, 43, 43, 0.829);
+        }
+        li.actif{
+            background : rgb(209, 207, 207);
+            color : black;
+        }
+    }
+
+    #contenus{
+
+        li{
+            background : rgb(228, 225, 225);
+            width : 500px;
+            padding : 20px;
+
+            display : none;
+        }
+        li.actif{
+            display : block;
+        }
+    }
+}

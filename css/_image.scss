@@ -1,0 +1,39 @@
+
+%img
+{
+  max-width: 100%;
+  height: auto;
+}
+
+.img-responsive 
+{
+  @extend %img;
+}
+.img-rounded
+{
+  @extend %img;
+
+  border-radius:40px 40px;
+}
+.img-circle 
+{
+  @extend %img;
+
+  border-radius: 50%;
+}
+.img-thumbnail 
+{
+  @extend %img;
+
+  border: 1px solid rgb(184, 182, 182);
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+  box-shadow: 0 0 2px 1px rgba(80, 89, 92, 0.5);
+}
+
+.img-blur 
+{
+  @extend %img;
+  filter: blur(10px);
+}

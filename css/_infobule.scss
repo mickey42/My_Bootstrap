@@ -1,0 +1,33 @@
+.element{
+    width : 100px;
+    background-color : rgba(48, 51, 50, 0.3);
+    margin-top : 20px;
+    margin-right :auto;
+    margin-left : auto;
+}
+.infobulle{
+    transform : scale(0) rotateX(-50deg);
+    position : absolute;
+    background-color : #231e2ccb;
+    color : white;
+    border-radius : 5px;
+    padding : 8px;
+    margin-top : 10px;
+    box-shadow : 1px 1px 0 0.5px rgba(0, 68, 255, 0.3);
+    border-bottom : 3px solid rgba(255,255,255,0.3);
+    border-left : 10px solid transparent;
+    border-right : 10px solid transparent;
+    transition : 1s;
+    &::before{
+        content : '';
+        position : absolute;
+        border-bottom : 8px solid #231e2ccb;
+        border-left : 8px solid transparent;
+        border-right : 8px solid transparent;
+        margin-top : -16px;
+        margin-left : 10px;
+    }
+}
+.element:hover > .infobulle{
+    transform : scale(1) rotateX(0deg);
+}

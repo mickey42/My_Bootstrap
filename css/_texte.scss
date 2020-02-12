@@ -1,0 +1,5 @@
+@each $color, $value  in $colors {
+    .txt-#{$color}{
+        color: rgba($value, 1);
+    }   
+}

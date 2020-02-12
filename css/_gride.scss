@@ -1,0 +1,42 @@
+%col{
+    float: left;
+    position: relative;
+    min-width: 1px;
+    padding:0 $guter * 0.5;
+
+    background-color: rgb(201, 201, 207);
+    border: 1px solid black;
+
+}
+
+.row{
+    margin: 0 $guter*0.5;
+    @extend %clearfix;
+}
+
+
+@for $i from 0 through $columns {
+    .col-s-#{$i}, .col-l-#{$i}, .col-m-#{$i}{@extend %col;}
+}
+.col-s-hidden{display: none;}
+.m-show{display: none;}
+.l-show{display: none;}
+
+@include responsive-col('-s');
+
+@media only screen and (min-width: $medium){
+    
+    @include responsive-col('-m');
+    .col-m-hidden{display: none;}
+    .m-show{display: block;}
+    .s-show{display: none;}
+}
+
+@media only screen and (min-width: $large){
+    
+    @include responsive-col('-l');
+    .col-l-hidden{display: none;}
+    .l-show{display: block;}
+    .m-show{display: none;}
+}
+

@@ -1,0 +1,21 @@
+@each $color, $value  in $colors {
+    .btn-#{$color}{
+        padding: 1% 50px;
+        border:none;
+        border-radius: 15px;
+        background-color: #{$value};
+            @if(lightness($value) > 50%){
+                &:hover{
+                    background-color: rgba($value, 0.5);
+                }
+                color: #000000 
+            }
+            @else{
+                &:hover{
+                    background-color: rgba($value, 0.5);
+                }
+                color: #faf1f1 
+            }
+    }
+    
+}
